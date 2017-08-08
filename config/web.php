@@ -1,10 +1,12 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
+$params_local = require(__DIR__ . '/params_local.php');
 $db = require(__DIR__ . '/db.php');
 $db_local = require(__DIR__ . '/db_local.php');
 
 $db = array_merge($db, $db_local);
+$params = array_merge($params, $params_local);
 
 $config = [
 	'id'         => 'basic',
